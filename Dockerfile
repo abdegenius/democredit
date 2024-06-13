@@ -7,6 +7,8 @@ WORKDIR /app
 COPY package*.json .
 COPY tsconfig.json .
 
+COPY .env.example .env
+
 # copy source code to /app/src folder
 COPY src /app/src
 
