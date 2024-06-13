@@ -4,7 +4,7 @@ class User {
   static findAll() {
     return DB("users");
   }
-  static findOne(id: number) {
+  static findOne(id: any) {
     return DB("users").where("id", id);
   }
   static findByEmail(email: string) {
@@ -15,6 +15,9 @@ class User {
   }
   static findByPhone(phone: string) {
     return DB("users").where("phone", phone);
+  }
+  static findIdByPhone(phone: string) {
+    return DB("users").select("id").where("phone", phone);
   }
   delete(id: number) {
     return DB("users").where("id", id).del();

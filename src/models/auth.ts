@@ -5,7 +5,7 @@ class Auth {
     const trx = await DB.transaction();
     try {
       const user = await trx.insert(data).into("users");
-      const wallet = DB("wallets")
+      const wallet = await DB("wallets")
         .insert({ user_id: user[0] })
         .transacting(trx);
       await trx.commit();

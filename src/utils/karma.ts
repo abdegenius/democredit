@@ -26,3 +26,20 @@ export const checkPhone = async (phone: string) => {
     return true;
   }
 };
+
+export const verifyBank = async (account_number: string, bank_code: string) => {
+  const { data } = await axios.post(
+    `${process.env.LENDSQR_BASE_URL}/verification/bankaccount`,
+    { account_number, bank_code },
+    {
+      headers: {
+        Authorization: "Bearer " + process.env.LENDSQR_SECRET_KEY,
+      },
+    }
+  );
+  if (data && data.status === "success") {
+    return data.data;
+  } else {
+    return null;
+  }
+};
