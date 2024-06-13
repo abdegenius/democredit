@@ -12,7 +12,7 @@ npm run start
 ```
 
 ## ER-DIAGRAM URL
-[text](https://dbdesigner.page.link/XSgTSraTKR4hBHkL8)
+[Click to view ER-diagram](https://dbdesigner.page.link/XSgTSraTKR4hBHkL8)
 
 
 ## Available APIS
