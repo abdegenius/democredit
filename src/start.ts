@@ -38,7 +38,7 @@ async function startServer(port = DEFAULT_PORT): Promise<Server> {
   app.use(cors());
   app.use(helmet());
 
-  app.use("/api/v1", routes);
+  app.use("/", routes);
 
   app.all("*", async (_req, res) => {
     return AppResponse.error({

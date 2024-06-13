@@ -10,7 +10,7 @@ exports.up = function (knex) {
     table.string("email", 100).unique().notNullable();
     table.string("phone", 20).notNullable();
     table.string("password", 255).notNullable();
-    table.enum("status", [0, 1]).defaultTo(1).notNullable();
+    table.enum("status", [0, 1, 2]).defaultTo(1).notNullable();
     table.timestamps(true, true);
   });
 };
