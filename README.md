@@ -9,10 +9,11 @@ first, clone the project then open the project file and run the command below
 ```bash
 npm install
 npm run start
+```
 
 ## ER-DIAGRAM URL
 [text](https://dbdesigner.page.link/XSgTSraTKR4hBHkL8)
-```
+
 
 ## Available APIS
 
