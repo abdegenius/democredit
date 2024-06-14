@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import logger from "loglevel";
 import routes from "./routes";
-
 import helmet from "helmet";
 import { errorHandler } from "./middlewares/error";
 import { AppResponse } from "./utils/response";
@@ -39,7 +38,6 @@ async function startServer(port = DEFAULT_PORT): Promise<Server> {
   app.use(helmet());
 
   app.use("/", routes);
-
   app.all("*", async (_req, res) => {
     return AppResponse.error({
       status: 404,

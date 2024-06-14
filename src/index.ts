@@ -1,6 +1,6 @@
 import logger from "loglevel";
 import startServer, { app } from "./start";
-const notDev = process.env.NODE_ENV !== "dev";
+const notDev = process.env.NODE_ENV !== "development";
 const logLevel = notDev ? "info" : "warn";
 
 // sets global logger for the app

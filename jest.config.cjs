@@ -4,7 +4,8 @@
  */
 
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  testURL: 'http://localhost'
+  preset: "ts-jest",
+  testEnvironment: "node",
+  testURL: "http://localhost",
+  setupFiles: ["./setEnvVars.js"],
 };

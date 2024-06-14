@@ -43,6 +43,7 @@ class AuthController {
                 password: hashed_password,
               };
               const user = await Auth.register(payload);
+
               if (user) {
                 const token = await generateJwtToken(
                   { id: user },
